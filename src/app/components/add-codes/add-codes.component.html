@@ -1,0 +1,43 @@
+<!--
+  HTML normal y clases de Bootstrap normales para algo de estilo
+  container para centrar y mt-5 para separar del borde superior
+ -->
+<div class="container mt-3">
+  <div class="bg-white rounded py-3 px-5">
+    <h3>
+      Añadir artículos por código
+      <!--
+        icono sencillo con tooltip de Bootstrap si se desea cambiar la información del tooltip
+        cambie el valor de la propiedad ngbTooltip
+       -->
+      <span
+        class="info-icon ml-1 text-white"
+        placement="top"
+        ngbTooltip="Información del buscador"
+        >i</span
+      >
+    </h3>
+    <div class="search-form mb-3">
+      <!-- el input tiene la referencia de angular #buscar para poder enviarlo a la funcion con todos sus datos -->
+      <input
+        type="text"
+        class="form-control border-info"
+        placeholder="Ej: 80265472, 98564528"
+        aria-label="Ej: 80265472, 98564528"
+        aria-describedby="button-addon2"
+        #buscar
+      />
+      <div class="mt-2">
+        <!-- el evento click dispara la funcion buscarCod pasandole el input por medio del identificador -->
+        <button class="btn btn-info btn-block" type="button" id="button-addon2" (click)="buscarCod(buscar)">
+          añadir
+        </button>
+      </div>
+    </div>
+      <!-- un pequeño feedback de errores para el usuario -->
+      <span *ngIf="mal.length > 0" class="text-danger">
+        <small>Los siguientes parametros eran incorrectos:</small>
+        <small *ngFor="let error of mal" class="bg-danger rounded-pill text-white mx-1 px-2">{{ error }}</small>
+      </span>
+  </div>
+</div>

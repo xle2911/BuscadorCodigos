@@ -1,0 +1,21 @@
+<div class="container mt-3">
+<!--
+  utilizo ngfor para mostrar todos lo elementos de cada array y el ngif para si no es el ultimo elemento mostrar una coma
+  para mejorar la legibilidad de los datos
+ -->
+  <div class="bg-white rounded p-5">
+    <fieldset class="rounded p-3">
+      <legend>Resultados</legend>
+      <div class="alert alert-success" role="alert">
+        <h5>Artículos válidos: </h5>
+        <span *ngFor="let valido of validos; let i = index">{{ valido }}<span *ngIf=" i+1 < validos.length ">, </span></span>
+      </div>
+
+      <div class="alert alert-warning mt-3" role="alert">
+        <h5>Artículos inválidos: </h5>
+        <span *ngFor="let invalido of invalidos; let i = index">{{ invalido }}<span *ngIf=" i+1 < invalidos.length ">, </span></span>
+      </div>
+    </fieldset>
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+
+<!--
+  De esta forma se hace que el elemento padre dispare el metodo checkArticleCodes cuando el hijo dispare el evento codes.
+  La variable $event contiene los datos enviados por el hijo.
+-->
+<div class="main-container">
+  <div class="content">
+    <h1>Buscar Códigos</h1>
+    <app-add-codes (codes)="checkArticleCodes($event)"></app-add-codes>
+
+    <!-- las rutas -->
+    <router-outlet></router-outlet>
+  </div>
+</div>

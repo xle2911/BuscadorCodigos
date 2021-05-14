@@ -1,0 +1,78 @@
+/*
+* Decidí utilizar SCSS debido a las mejoras que ofrece a CSS como preprocesador,
+* mejor compatibilidad con navegadores mas viejos y
+* la mejora a la hora de manejar las variables de Bootstrap.
+* Aunque en esta parte no se utilizó, es mejor pensar en la escalabilidad.
+*/
+body{
+  // código sencillo para que la pagina tome todo el alto del viewport
+  min-height: 100vh;
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.main-container{
+  display: flex;
+  justify-content: center;
+}
+.content{
+  width: 100%;
+  max-width: 1000px !important;
+}
+.info-icon{
+  // inline-flex para no saltar de linea y aliniación para centrar el elemento hijo en el centro
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background: #004e92 !important;
+}
+h1 {
+  font-family: Helvetica, sans-serif;
+  letter-spacing: -.25px;
+  font-weight: 100 !important;
+  color: white;
+  text-align: center;
+  font-size: 4.8rem!important;
+}
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100 !important;
+  color:#004e92;
+  margin-bottom:30px;
+  font-size:2rem!important;
+  text-align: center;
+}
+button{
+  // algo de variación al estilo de texto de los botones para mejorar la experiencia y la legibilidad
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600 !important;
+  font-size: .85rem !important;
+  line-height: 1.75 !important;
+  width: 100% !important;
+  color: #fff !important;
+}
+small{
+  // la letra italic ayuda a llamar la atención sobre el error
+  font-style: italic !important;
+}
+fieldset{
+  border: 1px solid #004e92;
+}
+legend{
+  padding: 1rem;
+  margin-top: -3rem;
+  background: #fff;
+  font-weight: 100 !important;
+  color:#004e92;
+  width: fit-content !important;
+}
+.rounded{
+  border-radius: .75rem !important;
+}
